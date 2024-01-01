@@ -6,6 +6,8 @@ import strapiCloud from "@strapi/plugin-cloud/strapi-admin";
 import documentation from "@strapi/plugin-documentation/strapi-admin";
 import i18N from "@strapi/plugin-i18n/strapi-admin";
 import usersPermissions from "@strapi/plugin-users-permissions/strapi-admin";
+import contentTypeExplorer from "strapi-content-type-explorer/strapi-admin";
+import configSync from "strapi-plugin-config-sync/strapi-admin";
 import { renderAdmin } from "@strapi/strapi/admin";
 
 import customisations from "../../src/admin/app.tsx";
@@ -18,5 +20,7 @@ renderAdmin(document.getElementById("strapi"), {
     documentation: documentation,
     i18n: i18N,
     "users-permissions": usersPermissions,
+    "content-type-explorer": contentTypeExplorer,
+    "config-sync": configSync,
   },
 });
